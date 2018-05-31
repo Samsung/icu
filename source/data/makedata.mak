@@ -561,7 +561,7 @@ COMMON_ICUDATA_ARGUMENTS=$(COMMON_ICUDATA_ARGUMENTS) -a
 #
 #############################################################################
 ALL : GODATA "$(ICU_LIB_TARGET)" "$(TESTDATAOUT)\testdata.dat"
-	touch $(ICUMAKE)\data\tmp\x86\makedata.exe # prevent error for escargot
+	echo.>$(ICUMAKE)\data\tmp\x86\makedata.exe # prevent error for us
 	@echo All targets are up to date
 
 !IF "$(UWP)" == "UWP"
