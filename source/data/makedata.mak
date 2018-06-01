@@ -686,6 +686,7 @@ icu4j-data-install :
 	"$(ICUPBIN)\icupkg" -x * --list "$(ICUDATA_SOURCE_ARCHIVE)" > "$(ICUTMP)\icudata.lst"
 	"$(ICUPBIN)\pkgdata" $(COMMON_ICUDATA_ARGUMENTS) "$(ICUTMP)\icudata.lst"
 	copy "$(U_ICUDATA_NAME).dll" "$(DLL_OUTPUT)"
+	copy "$(U_ICUDATA_NAME).dll" "$(CP_PATH)"
 	-@erase "$(U_ICUDATA_NAME).dll"
 	copy "$(ICUTMP)\$(ICUPKG).dat" "$(ICUOUT)\$(U_ICUDATA_NAME)$(U_ICUDATA_ENDIAN_SUFFIX).dat"
 	-@erase "$(ICUTMP)\$(ICUPKG).dat"
